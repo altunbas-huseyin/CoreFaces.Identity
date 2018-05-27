@@ -1,0 +1,18 @@
+/*UserRole tablosu ile User tablosu arasında foreign key bu şekildedir.*/
+alter table public."UserRole" 
+    add constraint fk_UserRole_User
+    foreign key ("UserId") 
+    REFERENCES "User" ("Id");
+
+/*RolePermission tablosu ile Permission tablosu arasında foreign key bu şekildedir.*/
+	alter table public."RolePermission" 
+    add constraint fk_RolePermission_Permission
+    foreign key ("PermissionId") 
+    REFERENCES "Permission" ("Id");
+
+
+
+    
+    
+   
+    

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CoreFaces.Identity.Client</id>
+    <version>1.0.0</version>
+    <authors>CoreFaces.Identity.Client</authors>
+    <owners>CoreFaces.Identity.Client</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="CoreFaces.Identity.Models" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="CoreFaces.Identity.Helper" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.FileExtensions" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Json" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="FluentValidation" version="7.2.0" exclude="Build,Analyzers" />
+        <dependency id="RestSharp.NetCore" version="105.2.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\haltunbas\Documents\GitHub\CoreFaces.Identity\CoreFaces.Identity.Client\bin\Release\netstandard2.0\CoreFaces.Identity.Client.dll" target="lib\netstandard2.0\CoreFaces.Identity.Client.dll" />
+  </files>
+</package>
