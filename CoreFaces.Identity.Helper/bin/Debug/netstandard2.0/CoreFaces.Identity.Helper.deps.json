@@ -21,7 +21,10 @@
           "NETStandard.Library": "2.0.1"
         },
         "runtime": {
-          "lib/netstandard1.0/FluentValidation.dll": {}
+          "lib/netstandard1.0/FluentValidation.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.2.0.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},

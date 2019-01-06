@@ -4061,6 +4061,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
+          "CoreFaces.Identity.Repositories": "1.0.0.2",
+          "CoreFaces.Identity.Services": "1.0.0.3",
           "CoreFaces.Licensing": "1.0.0",
           "FluentValidation": "7.2.0",
           "Microsoft.ApplicationInsights.AspNetCore": "2.1.1",
@@ -4097,7 +4099,7 @@
           "bin/placeholder/CoreFaces.Identity.Helper.dll": {}
         }
       },
-      "CoreFaces.Identity.Models/1.0.0": {
+      "CoreFaces.Identity.Models/1.0.0.14": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -4111,11 +4113,11 @@
           "bin/placeholder/CoreFaces.Identity.Models.dll": {}
         }
       },
-      "CoreFaces.Identity.Repositories/1.0.0.2": {
+      "CoreFaces.Identity.Repositories/1.0.0.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "CoreFaces.Identity.Models": "1.0.0",
+          "CoreFaces.Identity.Models": "1.0.0.14",
           "CoreFaces.Licensing": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.0.0",
           "Newtonsoft.Json": "10.0.3",
@@ -4128,14 +4130,14 @@
           "bin/placeholder/CoreFaces.Identity.Repositories.dll": {}
         }
       },
-      "CoreFaces.Identity.Services/1.0.0.2": {
+      "CoreFaces.Identity.Services/1.0.0.12": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "3.0.1",
           "CoreFaces.Identity.Helper": "1.0.0",
-          "CoreFaces.Identity.Models": "1.0.0",
-          "CoreFaces.Identity.Repositories": "1.0.0.2"
+          "CoreFaces.Identity.Models": "1.0.0.14",
+          "CoreFaces.Identity.Repositories": "1.0.0.3"
         },
         "compile": {
           "bin/placeholder/CoreFaces.Identity.Services.dll": {}
@@ -11204,17 +11206,17 @@
       "path": "../CoreFaces.Identity.Helper/CoreFaces.Identity.Helper.csproj",
       "msbuildProject": "../CoreFaces.Identity.Helper/CoreFaces.Identity.Helper.csproj"
     },
-    "CoreFaces.Identity.Models/1.0.0": {
+    "CoreFaces.Identity.Models/1.0.0.14": {
       "type": "project",
       "path": "../CoreFaces.Identity.Models/CoreFaces.Identity.Models.csproj",
       "msbuildProject": "../CoreFaces.Identity.Models/CoreFaces.Identity.Models.csproj"
     },
-    "CoreFaces.Identity.Repositories/1.0.0.2": {
+    "CoreFaces.Identity.Repositories/1.0.0.3": {
       "type": "project",
       "path": "../CoreFaces.Identity.Repositories/CoreFaces.Identity.Repositories.csproj",
       "msbuildProject": "../CoreFaces.Identity.Repositories/CoreFaces.Identity.Repositories.csproj"
     },
-    "CoreFaces.Identity.Services/1.0.0.2": {
+    "CoreFaces.Identity.Services/1.0.0.12": {
       "type": "project",
       "path": "../CoreFaces.Identity.Services/CoreFaces.Identity.Services.csproj",
       "msbuildProject": "../CoreFaces.Identity.Services/CoreFaces.Identity.Services.csproj"
@@ -11224,9 +11226,9 @@
     ".NETCoreApp,Version=v2.0": [
       "CoreFaces.Identity >= 1.0.0",
       "CoreFaces.Identity.Helper >= 1.0.0",
-      "CoreFaces.Identity.Models >= 1.0.0",
-      "CoreFaces.Identity.Repositories >= 1.0.0.2",
-      "CoreFaces.Identity.Services >= 1.0.0.2",
+      "CoreFaces.Identity.Models >= 1.0.0.14",
+      "CoreFaces.Identity.Repositories >= 1.0.0.3",
+      "CoreFaces.Identity.Services >= 1.0.0.12",
       "MSTest.TestAdapter >= 1.1.18",
       "MSTest.TestFramework >= 1.1.18",
       "Microsoft.AspNetCore.Http.Extensions >= 2.0.0",
@@ -11244,15 +11246,12 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.UnitTest\\CoreFaces.Identity.UnitTest.csproj",
+      "projectUniqueName": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.UnitTest\\CoreFaces.Identity.UnitTest.csproj",
       "projectName": "CoreFaces.Identity.UnitTest",
-      "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.UnitTest\\CoreFaces.Identity.UnitTest.csproj",
+      "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.UnitTest\\CoreFaces.Identity.UnitTest.csproj",
       "packagesPath": "C:\\Users\\haltunbas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.UnitTest\\obj\\",
+      "outputPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11272,20 +11271,20 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Repositories\\CoreFaces.Identity.Repositories.csproj": {
-              "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Repositories\\CoreFaces.Identity.Repositories.csproj"
+            "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj": {
+              "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj"
             },
-            "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj": {
-              "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj"
+            "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj": {
+              "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj"
             },
-            "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Services\\CoreFaces.Identity.Services.csproj": {
-              "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Services\\CoreFaces.Identity.Services.csproj"
+            "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Repositories\\CoreFaces.Identity.Repositories.csproj": {
+              "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Repositories\\CoreFaces.Identity.Repositories.csproj"
             },
-            "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity\\CoreFaces.Identity.csproj": {
-              "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity\\CoreFaces.Identity.csproj"
+            "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Services\\CoreFaces.Identity.Services.csproj": {
+              "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Services\\CoreFaces.Identity.Services.csproj"
             },
-            "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj": {
-              "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj"
+            "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity\\CoreFaces.Identity.csproj": {
+              "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity\\CoreFaces.Identity.csproj"
             }
           }
         }
@@ -11299,42 +11298,42 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Pomelo.EntityFrameworkCore.MySql": {
+          "MSTest.TestAdapter": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[1.1.18, )"
           },
           "MSTest.TestFramework": {
             "target": "Package",
-            "version": "1.1.18"
+            "version": "[1.1.18, )"
           },
           "Microsoft.AspNetCore.Http.Extensions": {
             "target": "Package",
-            "version": "2.0.0"
-          },
-          "MSTest.TestAdapter": {
-            "target": "Package",
-            "version": "1.1.18"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
+            "version": "[2.0.0, )"
           },
           "Microsoft.AspNetCore.Mvc": {
             "target": "Package",
-            "version": "2.0.0"
-          },
-          "Microsoft.NET.Test.Sdk": {
-            "target": "Package",
-            "version": "15.3.0"
+            "version": "[2.0.0, )"
           },
           "Microsoft.AspNetCore.TestHost": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[2.0.0, )"
+          },
+          "Microsoft.NET.Test.Sdk": {
+            "target": "Package",
+            "version": "[15.3.0, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
+          },
+          "Pomelo.EntityFrameworkCore.MySql": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           },
           "System.Runtime.Serialization.Xml": {
             "target": "Package",
-            "version": "4.3.0"
+            "version": "[4.3.0, )"
           }
         },
         "imports": [

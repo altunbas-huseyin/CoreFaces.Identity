@@ -960,7 +960,7 @@
           "lib/netstandard2.0/MySqlConnector.dll": {}
         }
       },
-      "NETStandard.Library/2.0.1": {
+      "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -2463,7 +2463,7 @@
           "bin/placeholder/CoreFaces.Identity.Models.dll": {}
         }
       },
-      "CoreFaces.Identity.Repositories/1.0.0.2": {
+      "CoreFaces.Identity.Repositories/1.0.0.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -3333,14 +3333,13 @@
         "mysqlconnector.nuspec"
       ]
     },
-    "NETStandard.Library/2.0.1": {
-      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
+    "NETStandard.Library/2.0.3": {
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
-      "path": "netstandard.library/2.0.1",
+      "path": "netstandard.library/2.0.3",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "build/NETStandard.Library.targets",
         "build/netstandard2.0/NETStandard.Library.targets",
         "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
         "build/netstandard2.0/ref/System.AppContext.dll",
@@ -3457,7 +3456,7 @@
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.1.nupkg.sha512",
+        "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
     },
@@ -7270,7 +7269,7 @@
       "path": "../CoreFaces.Identity.Models/CoreFaces.Identity.Models.csproj",
       "msbuildProject": "../CoreFaces.Identity.Models/CoreFaces.Identity.Models.csproj"
     },
-    "CoreFaces.Identity.Repositories/1.0.0.2": {
+    "CoreFaces.Identity.Repositories/1.0.0.3": {
       "type": "project",
       "path": "../CoreFaces.Identity.Repositories/CoreFaces.Identity.Repositories.csproj",
       "msbuildProject": "../CoreFaces.Identity.Repositories/CoreFaces.Identity.Repositories.csproj"
@@ -7281,8 +7280,8 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 3.0.1",
       "CoreFaces.Identity.Helper >= 1.0.0",
       "CoreFaces.Identity.Models >= 1.0.0.14",
-      "CoreFaces.Identity.Repositories >= 1.0.0.2",
-      "NETStandard.Library >= 2.0.1"
+      "CoreFaces.Identity.Repositories >= 1.0.0.3",
+      "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
@@ -7290,16 +7289,13 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0.11",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
+    "version": "1.0.0.12",
     "restore": {
-      "projectUniqueName": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Services\\CoreFaces.Identity.Services.csproj",
+      "projectUniqueName": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Services\\CoreFaces.Identity.Services.csproj",
       "projectName": "CoreFaces.Identity.Services",
-      "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Services\\CoreFaces.Identity.Services.csproj",
+      "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Services\\CoreFaces.Identity.Services.csproj",
       "packagesPath": "C:\\Users\\haltunbas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Services\\obj\\",
+      "outputPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7319,14 +7315,14 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj": {
-              "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj"
+            "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj": {
+              "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj"
             },
-            "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Repositories\\CoreFaces.Identity.Repositories.csproj": {
-              "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Repositories\\CoreFaces.Identity.Repositories.csproj"
+            "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj": {
+              "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj"
             },
-            "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj": {
-              "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj"
+            "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Repositories\\CoreFaces.Identity.Repositories.csproj": {
+              "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Repositories\\CoreFaces.Identity.Repositories.csproj"
             }
           }
         }
@@ -7347,7 +7343,7 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.1, )",
+            "version": "[2.0.3, )",
             "autoReferenced": true
           }
         },
