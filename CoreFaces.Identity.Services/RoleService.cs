@@ -15,6 +15,7 @@ namespace CoreFaces.Identity.Services
     {
         Role GetByEmail(string email);
         Role GetByName(Guid userId, string name);
+        Role GetByName(string name);
         List<RoleView> GetByUserId(Guid userId);
         Role GetById(Guid userId, Guid id);
         Role GetByUserIdAndName(Guid userId, string name);
@@ -64,6 +65,11 @@ namespace CoreFaces.Identity.Services
         public Role GetByName(Guid userId, string name)
         {
             return _roleRepository.GetByName(userId, name);
+        }
+
+        public Role GetByName(string name)
+        {
+            return _roleRepository.GetByName(name);
         }
 
         public List<RoleView> GetByUserId(Guid userId)

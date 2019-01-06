@@ -14,6 +14,7 @@ namespace CoreFaces.Identity.Repositories
     {
         Role GetByEmail(string email);
         Role GetByName(Guid userId, string name);
+        Role GetByName(string name);
         List<Role> GetByUserId(Guid userId);
         Role GetById(Guid userId, Guid id);
         Role GetByUserIdAndName(Guid userId, string name);
@@ -75,6 +76,12 @@ namespace CoreFaces.Identity.Repositories
         public Role GetByName(Guid userId, string name)
         {
             Role role = _identityDatabaseContext.Set<Role>().Where(p => p.UserId == userId && p.Name == name).FirstOrDefault();
+            return role;
+        }
+
+        public Role GetByName(string name)
+        {
+            Role role = _identityDatabaseContext.Set<Role>().Where(p => p.Name == name).FirstOrDefault();
             return role;
         }
 
