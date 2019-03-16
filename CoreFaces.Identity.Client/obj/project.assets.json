@@ -2114,7 +2114,7 @@
           "bin/placeholder/CoreFaces.Identity.Helper.dll": {}
         }
       },
-      "CoreFaces.Identity.Models/1.0.0.14": {
+      "CoreFaces.Identity.Models/1.0.0.15": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -6580,7 +6580,7 @@
       "path": "../CoreFaces.Identity.Helper/CoreFaces.Identity.Helper.csproj",
       "msbuildProject": "../CoreFaces.Identity.Helper/CoreFaces.Identity.Helper.csproj"
     },
-    "CoreFaces.Identity.Models/1.0.0.14": {
+    "CoreFaces.Identity.Models/1.0.0.15": {
       "type": "project",
       "path": "../CoreFaces.Identity.Models/CoreFaces.Identity.Models.csproj",
       "msbuildProject": "../CoreFaces.Identity.Models/CoreFaces.Identity.Models.csproj"
@@ -6589,7 +6589,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "CoreFaces.Identity.Helper >= 1.0.0",
-      "CoreFaces.Identity.Models >= 1.0.0.14",
+      "CoreFaces.Identity.Models >= 1.0.0.15",
       "FluentValidation >= 7.2.0",
       "Microsoft.AspNetCore >= 2.0.0",
       "Microsoft.Extensions.Configuration.FileExtensions >= 2.0.0",

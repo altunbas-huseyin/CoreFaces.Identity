@@ -18,6 +18,7 @@ namespace CoreFaces.Identity.Repositories
         List<UserRole> GetByUserId(Guid userId);
         Result<UserRole> UserAddRole(Guid ownerId, Guid userId, Guid roleId);
         bool UserRemoveRole(Guid parentId, Guid userId, Guid roleId);
+        bool UserRemoveRole(Guid userId, Guid roleId);
         bool IsAddedRole(User user, Guid roleId);
         List<UserRole> GetByRoleId(Guid roleId);
     }
@@ -81,6 +82,19 @@ namespace CoreFaces.Identity.Repositories
             return Convert.ToBoolean(result);
         }
 
+        public bool UserRemoveRole(Guid userId, Guid roleId)
+        {
+            User user = _userRepository.GetById(userId);
+            if (user == null)
+            { return false; }
+
+            UserRole userRole = this.GetById(userId, roleId);
+            _identityDatabaseContext.Remove(userRole);
+            int result = _identityDatabaseContext.SaveChanges();
+
+            return Convert.ToBoolean(result);
+        }
+
         public bool IsAddedRole(User user, Guid roleId)
         {
             UserRole role = _identityDatabaseContext.Set<UserRole>().Where(p => p.Id == roleId).FirstOrDefault();
@@ -105,6 +119,12 @@ namespace CoreFaces.Identity.Repositories
         public UserRole GetById(Guid ownerId, Guid userId, Guid userRoleId)
         {
             UserRole model = _identityDatabaseContext.Set<UserRole>().Where(p => p.UserId == userId && p.Id == userRoleId && p.OwnerId == ownerId).FirstOrDefault();
+            return model;
+        }
+
+        public UserRole GetById( Guid userId, Guid userRoleId)
+        {
+            UserRole model = _identityDatabaseContext.Set<UserRole>().Where(p => p.UserId == userId && p.Id == userRoleId).FirstOrDefault();
             return model;
         }
 

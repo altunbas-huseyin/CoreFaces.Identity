@@ -7,12 +7,12 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "CoreFaces.Identity.Services/1.0.0.13": {
+      "CoreFaces.Identity.Services/1.0.0.14": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "3.0.1",
           "CoreFaces.Identity.Helper": "1.0.0",
-          "CoreFaces.Identity.Models": "1.0.0.14",
-          "CoreFaces.Identity.Repositories": "1.0.0.4",
+          "CoreFaces.Identity.Models": "1.0.0.15",
+          "CoreFaces.Identity.Repositories": "1.0.0.5",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
@@ -1921,7 +1921,7 @@
           "CoreFaces.Identity.Helper.dll": {}
         }
       },
-      "CoreFaces.Identity.Models/1.0.0.14": {
+      "CoreFaces.Identity.Models/1.0.0.15": {
         "dependencies": {
           "FluentValidation": "7.2.0",
           "Microsoft.EntityFrameworkCore": "2.0.0"
@@ -1930,9 +1930,9 @@
           "CoreFaces.Identity.Models.dll": {}
         }
       },
-      "CoreFaces.Identity.Repositories/1.0.0.4": {
+      "CoreFaces.Identity.Repositories/1.0.0.5": {
         "dependencies": {
-          "CoreFaces.Identity.Models": "1.0.0.14",
+          "CoreFaces.Identity.Models": "1.0.0.15",
           "CoreFaces.Licensing": "1.0.0",
           "Kendo.DynamicLinq.NetStandard": "1.0.1",
           "Microsoft.EntityFrameworkCore": "2.0.0",
@@ -1954,7 +1954,7 @@
     }
   },
   "libraries": {
-    "CoreFaces.Identity.Services/1.0.0.13": {
+    "CoreFaces.Identity.Services/1.0.0.14": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3077,12 +3077,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CoreFaces.Identity.Models/1.0.0.14": {
+    "CoreFaces.Identity.Models/1.0.0.15": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "CoreFaces.Identity.Repositories/1.0.0.4": {
+    "CoreFaces.Identity.Repositories/1.0.0.5": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

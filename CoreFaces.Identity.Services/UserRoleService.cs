@@ -19,6 +19,7 @@ namespace CoreFaces.Identity.Services
         List<UserRoleView> GetByUserId(Guid userId);
         Result<UserRole> UserAddRole(Guid ownerId, Guid userId, Guid roleId);
         bool UserRemoveRole(Guid parentId, Guid userId, Guid roleId);
+        bool UserRemoveRole(Guid userId, Guid roleId);
         bool IsAddedRole(User user, Guid roleId);
         UserRoleView UserRoleToUserRoleView(UserRole userRole);
         List<UserRole> GetByRoleId(Guid roleId);
@@ -120,6 +121,11 @@ namespace CoreFaces.Identity.Services
         public bool UserRemoveRole(Guid parentId, Guid userId, Guid roleId)
         {
             return _userRoleRepository.UserRemoveRole(parentId, userId, roleId);
+        }
+
+        public bool UserRemoveRole(Guid userId, Guid roleId)
+        {
+            return _userRoleRepository.UserRemoveRole(userId, roleId);
         }
 
         public bool IsAddedRole(User user, Guid roleId)

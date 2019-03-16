@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "CoreFaces.Identity.Models/1.0.0.14": {
+      "CoreFaces.Identity.Models/1.0.0.15": {
         "dependencies": {
           "FluentValidation": "7.2.0",
           "Microsoft.EntityFrameworkCore": "2.0.0",
@@ -454,7 +454,7 @@
     }
   },
   "libraries": {
-    "CoreFaces.Identity.Models/1.0.0.14": {
+    "CoreFaces.Identity.Models/1.0.0.15": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

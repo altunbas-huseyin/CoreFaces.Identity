@@ -2409,7 +2409,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0.14",
+    "version": "1.0.0.15",
     "restore": {
       "projectUniqueName": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj",
       "projectName": "CoreFaces.Identity.Models",
