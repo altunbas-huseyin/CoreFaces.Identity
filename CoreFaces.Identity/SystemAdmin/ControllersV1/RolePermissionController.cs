@@ -52,18 +52,10 @@ namespace CoreFaces.Identity.SystemAdmin.ControllersV1
             rolePermission.RoleId = roleId;
 
             bool result = false;
-            Guid insertId;
             string error = "";
 
+            Guid insertId = _rolePermissionService.Save(rolePermission);
 
-            try
-            {
-                insertId = _rolePermissionService.Save(rolePermission);
-            }
-            catch (Exception ex)
-            {
-                error = ex.Message;
-            }
             result = Guid.TryParse(insertId.ToString(), out insertId);
             if (result)
             {

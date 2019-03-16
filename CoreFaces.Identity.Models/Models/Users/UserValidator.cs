@@ -11,10 +11,10 @@ namespace CoreFaces.Identity.Models.Users
         public UserValidator()
         {
             RuleFor(p => p.Name).NotEmpty().WithMessage("Lütfen adınızı giriniz.");
-            RuleFor(p => p.Name).Length(2, 100).WithMessage("Ad alanını kontrol ediniz");
+            //RuleFor(p => p.Name).Length(2, 100).WithMessage("Ad alanını kontrol ediniz");
 
             RuleFor(p => p.SurName).NotEmpty().WithMessage("Lütfen soyadınızı giriniz.");
-            RuleFor(p => p.SurName).Length(2, 100).WithMessage("Soyad alanını kontrol ediniz");
+            //RuleFor(p => p.SurName).Length(2, 100).WithMessage("Soyad alanını kontrol ediniz");
 
             RuleFor(p => p.Password).Length(4, 20).WithMessage("Şifreniz 4 ila 20 karakter olmalıdır.");
 

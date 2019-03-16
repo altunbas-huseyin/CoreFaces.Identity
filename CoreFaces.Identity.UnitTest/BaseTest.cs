@@ -47,6 +47,12 @@ namespace CoreFaces.Identity.UnitTest
             _rolePermissionService = new RolePermissionService(_identityDatabaseContext, options, iHttpContextAccessor);
             _userRoleService = new UserRoleService(_identityDatabaseContext, options, iHttpContextAccessor);
             schemaService = new SchemaService(_identityDatabaseContext, options, iHttpContextAccessor);
+
+
+            //Status Services.
+            //StatusSettings _statusSettings = new StatusSettings() { FileUploadFolderPath = "c:/" };
+            //IOptions<StatusSettings> statusOptions = Options.Create(_statusSettings);
+            //_statusService = new StatusService(_statusDatabaseContext, statusOptions, iHttpContextAccessor);
         }
     }
 }

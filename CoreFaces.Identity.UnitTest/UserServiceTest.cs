@@ -9,7 +9,6 @@ namespace CoreFaces.Identity.UnitTest
     public class UserServiceTest : BaseTest
     {
         private User user = null;
-
         public UserServiceTest()
         {
             
@@ -33,6 +32,13 @@ namespace CoreFaces.Identity.UnitTest
             bool result = false;
             result = Guid.TryParse(inserId.ToString(), out inserId);
             Assert.AreEqual(result, true);
+        }
+
+        [TestMethod]
+        public void Get()
+        {
+            Kendo.DynamicLinq.View filters = new Kendo.DynamicLinq.View();
+            var inserId = _userService.Get(filters);
         }
 
         [TestMethod]

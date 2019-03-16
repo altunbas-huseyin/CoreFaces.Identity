@@ -1,6 +1,7 @@
 ﻿using CoreFaces.Identity.Models.Domain;
 using CoreFaces.Identity.Models.Models;
 using CoreFaces.Licensing;
+using Kendo.DynamicLinq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using System;
@@ -11,6 +12,7 @@ namespace CoreFaces.Identity.Repositories
 {
     public interface IUserRepository : IBaseRepository<User>
     {
+        DataSourceResult Get(Kendo.DynamicLinq.View filters);
         User GetByEmail(string email);
         User LoginByEmail(String email, string password);
         List<User> GetByParentId(Guid parentId);
@@ -26,6 +28,24 @@ namespace CoreFaces.Identity.Repositories
         public UserRepository(IdentityDatabaseContext identityDatabaseContext, IOptions<IdentitySettings> identitySettings, IHttpContextAccessor iHttpContextAccessor) : base("Identity", iHttpContextAccessor, identitySettings.Value.IdentityLicenseDomain, identitySettings.Value.IdentityLicenseKey)
         {
             _identityDatabaseContext = identityDatabaseContext;
+        }
+
+        public DataSourceResult Get(Kendo.DynamicLinq.View filters)
+        {
+            Kendo.DynamicLinq.Filter Filter = null;
+            if (filters.Filter != null)
+            {
+                Filter = filters.FieldTypeCheckAll(filters.Filter);
+            }
+            if (Filter != null)
+            {
+                filters.Filter = Filter;
+            }
+            //List<Models.Domain.User> result = new List<User>();
+            DataSourceResult result = _identityDatabaseContext.Set<Models.Domain.User>()
+                            .OrderBy(p => p.CreateDate) // EF requires ordering for paging
+                         .ToDataSourceResult(filters.Take, filters.Skip, filters.Sort, filters.Filter, filters.Aggregates);
+            return result;
         }
 
         public User GetByEmail(string email)
@@ -103,7 +123,7 @@ namespace CoreFaces.Identity.Repositories
 
         public User GetById(Guid parentId, Guid userId)
         {
-            User model = _identityDatabaseContext.Set<User>().Where(p => p.Id == userId && p.ParentId==parentId).FirstOrDefault();
+            User model = _identityDatabaseContext.Set<User>().Where(p => p.Id == userId && p.ParentId == parentId).FirstOrDefault();
             return model;
         }
 

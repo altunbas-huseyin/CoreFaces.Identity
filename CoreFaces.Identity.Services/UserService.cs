@@ -11,11 +11,13 @@ using CoreFaces.Identity.Models.UserRole;
 using Microsoft.Extensions.Options;
 using CoreFaces.Identity.Models.Models;
 using Microsoft.AspNetCore.Http;
+using Kendo.DynamicLinq;
 
 namespace CoreFaces.Identity.Services
 {
     public interface IUserService : IBaseService<User>
     {
+        DataSourceResult Get(Kendo.DynamicLinq.View filters);
         User GetByEmail(string email);
         UserView LoginByEmail(String email, string password);
         List<User> GetByParentId(Guid parentId);
@@ -39,6 +41,19 @@ namespace CoreFaces.Identity.Services
             _jwtService = new JwtService(identityDatabaseContext, identitySettings, iHttpContextAccessor);
             //_roleService = new RoleService(identityDatabaseContext);
             _userRoleService = new UserRoleService(identityDatabaseContext, identitySettings, iHttpContextAccessor);
+        }
+
+        public DataSourceResult Get(Kendo.DynamicLinq.View filters)
+        {
+            DataSourceResult result = _userRepository.Get(filters);
+            List<User> users = (List<User>)result.Data;
+            List<UserView> usersView = new List<UserView>();
+            foreach (User user in users)
+            {
+                usersView.Add(UserToUserView(user));
+            }
+            result.Data = usersView;
+            return result;
         }
 
         public User GetByEmail(string email)

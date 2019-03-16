@@ -776,7 +776,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "NETStandard.Library/2.0.1": {
+      "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -2785,14 +2785,13 @@
         "runtime.json"
       ]
     },
-    "NETStandard.Library/2.0.1": {
-      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
+    "NETStandard.Library/2.0.3": {
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
-      "path": "netstandard.library/2.0.1",
+      "path": "netstandard.library/2.0.3",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "build/NETStandard.Library.targets",
         "build/netstandard2.0/NETStandard.Library.targets",
         "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
         "build/netstandard2.0/ref/System.AppContext.dll",
@@ -2909,7 +2908,7 @@
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.1.nupkg.sha512",
+        "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
     },
@@ -6596,7 +6595,7 @@
       "Microsoft.Extensions.Configuration.FileExtensions >= 2.0.0",
       "Microsoft.Extensions.Configuration.Json >= 2.0.0",
       "Microsoft.Extensions.Logging.Debug >= 2.0.0",
-      "NETStandard.Library >= 2.0.1",
+      "NETStandard.Library >= 2.0.3",
       "RestSharp.NetCore >= 105.2.3"
     ]
   },
@@ -6606,15 +6605,12 @@
   },
   "project": {
     "version": "1.0.0.1",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Client\\CoreFaces.Identity.Client.csproj",
+      "projectUniqueName": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Client\\CoreFaces.Identity.Client.csproj",
       "projectName": "CoreFaces.Identity.Client",
-      "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Client\\CoreFaces.Identity.Client.csproj",
+      "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Client\\CoreFaces.Identity.Client.csproj",
       "packagesPath": "C:\\Users\\haltunbas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Client\\obj\\",
+      "outputPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6634,11 +6630,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj": {
-              "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj"
+            "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj": {
+              "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Helper\\CoreFaces.Identity.Helper.csproj"
             },
-            "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj": {
-              "projectPath": "C:\\Users\\haltunbas\\Documents\\GitHub\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj"
+            "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj": {
+              "projectPath": "D:\\Projeler\\CoreFaces.Identity\\CoreFaces.Identity.Models\\CoreFaces.Identity.Models.csproj"
             }
           }
         }
@@ -6675,7 +6671,7 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.1, )",
+            "version": "[2.0.3, )",
             "autoReferenced": true
           },
           "RestSharp.NetCore": {
