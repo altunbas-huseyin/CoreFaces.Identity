@@ -17,6 +17,7 @@ namespace CoreFaces.Identity.Models.Domain
         public string SurName { get; set; }
         public DateTime BirthDate { get; set; }
         public string Gsm { get; set; } = "";
+        public string Phone { get; set; } = "";
         public string FirmName { get; set; } = "";
         /// <summary>
         /// Tc kimlik no 
@@ -31,6 +32,9 @@ namespace CoreFaces.Identity.Models.Domain
         /// </summary>
         public string SectionName { get; set; } = "";
         public string CustomerId { get; set; } = "";
+        public int CityId { get; set; } 
+        public int DistRictId { get; set; } 
+        public int SubDistRictId { get; set; } 
         public string Extra1 { get; set; } = "";
         public string Extra2 { get; set; } = "";
         public ICollection<UserRole> UserRoles { get; set; }
