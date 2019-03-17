@@ -17,6 +17,7 @@ namespace CoreFaces.Identity.Repositories
         List<UserRole> GetByUserId(Guid ownerId, Guid userId);
         List<UserRole> GetByUserId(Guid userId);
         Result<UserRole> UserAddRole(Guid ownerId, Guid userId, Guid roleId);
+        Result<UserRole> UserAddRole(Guid userId, Guid roleId);
         bool UserRemoveRole(Guid parentId, Guid userId, Guid roleId);
         bool UserRemoveRole(Guid userId, Guid roleId);
         bool IsAddedRole(User user, Guid roleId);
@@ -33,7 +34,7 @@ namespace CoreFaces.Identity.Repositories
         public UserRoleRepository(IdentityDatabaseContext identityDatabaseContext, IOptions<IdentitySettings> identitySettings, IHttpContextAccessor iHttpContextAccessor) : base("Identity", iHttpContextAccessor, identitySettings.Value.IdentityLicenseDomain, identitySettings.Value.IdentityLicenseKey)
         {
             _identityDatabaseContext = identityDatabaseContext;
-            _userRepository = new UserRepository(identityDatabaseContext,identitySettings,iHttpContextAccessor);
+            _userRepository = new UserRepository(identityDatabaseContext, identitySettings, iHttpContextAccessor);
             _roleRepository = new RoleRepository(identityDatabaseContext, identitySettings, iHttpContextAccessor);
         }
 
@@ -58,6 +59,39 @@ namespace CoreFaces.Identity.Repositories
 
             UserRole userRole = new UserRole();
             userRole.OwnerId = ownerId;
+            userRole.UserId = userId;
+            userRole.RoleId = role.Id;
+            userRole.StatusId = 1;
+
+            _identityDatabaseContext.Add(userRole);
+            int saveResult = _identityDatabaseContext.SaveChanges();
+            result.Status = Convert.ToBoolean(saveResult);
+            result.Data = userRole;
+            return result;
+        }
+
+
+        public Result<UserRole> UserAddRole(Guid userId, Guid roleId)
+        {
+            User user = _userRepository.GetById(userId);
+            if (user == null)
+            {
+                result.AddError("Üye bulunamadı.");
+                return result;
+            }
+
+            //Rol kullanıcıya daha önce atanmış ise bir işlem yapılmıyor
+            bool resultIsAdded = IsAddedRole(user, roleId);
+            if (resultIsAdded)
+            {
+                result.AddError("Bu rol daha önce eklenmiş.");
+                return result;
+            }
+
+            Role role = _roleRepository.GetById(roleId);
+
+            UserRole userRole = new UserRole();
+            userRole.OwnerId = Guid.Parse("00000000-0000-0000-0000-000000000000");
             userRole.UserId = userId;
             userRole.RoleId = role.Id;
             userRole.StatusId = 1;
@@ -122,7 +156,7 @@ namespace CoreFaces.Identity.Repositories
             return model;
         }
 
-        public UserRole GetById( Guid userId, Guid userRoleId)
+        public UserRole GetById(Guid userId, Guid userRoleId)
         {
             UserRole model = _identityDatabaseContext.Set<UserRole>().Where(p => p.UserId == userId && p.Id == userRoleId).FirstOrDefault();
             return model;
