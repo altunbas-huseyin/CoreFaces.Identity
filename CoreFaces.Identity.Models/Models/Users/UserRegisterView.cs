@@ -23,5 +23,9 @@ namespace CoreFaces.Identity.Models.Users
         public Guid AreaId { get; set; }
         public DateTime StartDate { get; set; } = Convert.ToDateTime("01.01.1700");
         public DateTime EndDate { get; set; } = Convert.ToDateTime("01.01.1700");
+        public string Phone { get; set; } = "";
+        public int CityId { get; set; }
+        public int DistRictId { get; set; }
+        public int SubDistRictId { get; set; }
     }
 }
