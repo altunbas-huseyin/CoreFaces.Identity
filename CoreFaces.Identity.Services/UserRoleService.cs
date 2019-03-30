@@ -91,6 +91,7 @@ namespace CoreFaces.Identity.Services
                 Role role = _roleRepository.GetById(userRole.RoleId);
                 UserRoleView userRoleView = UserRoleToUserRoleView(userRole);
                 userRoleView.Name = role.Name;
+                userRoleView.RoleDescription = role.Description;
 
                 userRoleViewList.Add(userRoleView);
             }
