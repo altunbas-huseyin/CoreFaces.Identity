@@ -10,8 +10,8 @@ namespace CoreFaces.Identity.Services
 {
     public interface IIdentitySchemaService
     {
-        bool DropTables();
-        bool EnsureCreated();
+        //bool DropTables();
+        //bool EnsureCreated();
     }
 
     public class SchemaService : IIdentitySchemaService
@@ -24,15 +24,15 @@ namespace CoreFaces.Identity.Services
             _identitySchemaRepository = new IdentitySchemaRepository(_identityDatabaseContext, identitySettings, iHttpContextAccessor);
         }
 
-        public bool DropTables()
-        {
-            return _identitySchemaRepository.DropTables();
-        }
+        //public bool DropTables()
+        //{
+        //    return _identitySchemaRepository.DropTables();
+        //}
 
-        public bool EnsureCreated()
-        {
-            return _identitySchemaRepository.EnsureCreated();
-        }
+        //public bool EnsureCreated()
+        //{
+        //    return _identitySchemaRepository.EnsureCreated();
+        //}
     }
 
 }

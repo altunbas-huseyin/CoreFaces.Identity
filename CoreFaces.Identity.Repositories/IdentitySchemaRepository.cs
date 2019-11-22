@@ -13,8 +13,8 @@ namespace CoreFaces.Identity.Repositories
 {
     public interface IIdentitySchemaRepository
     {
-        bool DropTables();
-        bool EnsureCreated();
+        //bool DropTables();
+        //bool EnsureCreated();
     }
 
     public class IdentitySchemaRepository : Licence, IIdentitySchemaRepository
@@ -26,21 +26,21 @@ namespace CoreFaces.Identity.Repositories
             _identityDatabaseContext = identityDatabaseContext;
         }
 
-        public bool DropTables()
-        {
-            int result = _identityDatabaseContext.Database.ExecuteSqlCommand("DROP TABLE Jwt; DROP TABLE RolePermission; DROP TABLE Permission; DROP TABLE UserRole; DROP TABLE User; DROP TABLE Role;");
-            if (result == 0)
-                return true;
-            else
-                return false;
-        }
+        //public bool DropTables()
+        //{
+        //    int result = _identityDatabaseContext.Database.ExecuteSqlCommand("DROP TABLE Jwt; DROP TABLE RolePermission; DROP TABLE Permission; DROP TABLE UserRole; DROP TABLE User; DROP TABLE Role;");
+        //    if (result == 0)
+        //        return true;
+        //    else
+        //        return false;
+        //}
 
-        public bool EnsureCreated()
-        {
-            RelationalDatabaseCreator databaseCreator = (RelationalDatabaseCreator)_identityDatabaseContext.Database.GetService<IDatabaseCreator>();
-            databaseCreator.CreateTables();
-            return true;
-        }
+        //public bool EnsureCreated()
+        //{
+        //    RelationalDatabaseCreator databaseCreator = (RelationalDatabaseCreator)_identityDatabaseContext.Database.GetService<IDatabaseCreator>();
+        //    databaseCreator.CreateTables();
+        //    return true;
+        //}
     }
 
 }
