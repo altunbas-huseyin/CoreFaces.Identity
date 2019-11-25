@@ -76,7 +76,14 @@ namespace CoreFaces.Identity
             //loggerFactory.AddDebug();
 
             app.UseCors("CorsPolicy");//Cors Policy 
-            app.UseMvc();
+            //app.UseMvc();
+            app.UseStaticFiles();
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
+            });
             app.UseResponseWrapper();
         }
 
