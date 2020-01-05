@@ -29,6 +29,7 @@ namespace CoreFaces.Identity.Models.Mapping
             //entityBuilder.Property(t => t.Roles).IsRequired();
 
             //Uniq Index
+            entityBuilder.HasIndex(t => new { t.Id }).IsUnique();
             entityBuilder.HasIndex(t => new { t.Email, t.ParentId }).IsUnique();
 
 
