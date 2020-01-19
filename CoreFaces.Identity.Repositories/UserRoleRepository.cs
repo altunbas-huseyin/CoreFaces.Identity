@@ -179,7 +179,10 @@ namespace CoreFaces.Identity.Repositories
 
         public bool Delete(Guid id)
         {
-            throw new NotImplementedException();
+            UserRole userRole = this.GetById(id);
+            _identityDatabaseContext.Remove(userRole);
+            int result = _identityDatabaseContext.SaveChanges();
+            return Convert.ToBoolean(result);
         }
 
         public UserRole GetById(Guid id)
